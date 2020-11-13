@@ -1,0 +1,8 @@
+pandas
+numpy
+gym
+scikit-learn
+cryptocompare
+stable_baselines3
+wget
+streamlit
