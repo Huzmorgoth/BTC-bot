@@ -27,7 +27,7 @@ def importing_dataset():
     if os.path.exists(filename):
         df = pd.read_csv(filename)
         df.reset_index(inplace=True)
-        df.columns = ['Timestamp', 'Date', 'Symbol', 'Open', 'High', 'Low', 'Close', 'Volume_(BTC)', 'Volume_(USDT)']
+        df.columns = ['Timestamp', 'Date', 'Symbol', 'Open', 'High', 'Low', 'Close', 'Volume_(BTC)', 'Volume_(USDT)', 'Trade_count']
         df = df.drop(index=0, axis=0)
         return df
     else:
