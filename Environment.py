@@ -97,7 +97,7 @@ class GymEnvironment(gym.Env):
 
     def step(self, action):
         # current_price = float(self.df_subset['Close'].iloc[self.current_step]) + 0.01
-        current_price = currentPrice('BTC', curr='USD').get('BTC').get('USD') + 0.01
+        current_price = currentPrice('BTC',curr='USD', full=True) + 0.01
         self._take_action(action, current_price)
         self._reset_session()
         obs = self._next_observation()
